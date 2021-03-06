@@ -92,6 +92,7 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 source <(kubectl completion bash)
+alias k='kubectl'
 
 # un taint master so that you can run pods on this bad boy
 kubectl taint nodes --all node-role.kubernetes.io/master-
